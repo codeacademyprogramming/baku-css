@@ -20,6 +20,7 @@
   &:disabled {
     cursor: default;
     opacity: 0.5;
+    filter: brightness(100%);
   }
 }
 
@@ -34,5 +35,13 @@
     background-color: transparent;
     color: $color;
     border: 1px solid $color;
+  }
+}
+
+@each $name, $size in $base-sizes {
+  .button-#{$name} {
+    @extend .button;
+    padding: auto #{$size}rem;
+    font-size: #{$size}rem;
   }
 }
