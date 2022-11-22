@@ -1,0 +1,12 @@
+.card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.card-img {
+  width: 286px;
+  height: 180px;
+}
