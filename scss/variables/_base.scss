@@ -10,6 +10,19 @@ $theme-colors: (
 	'muted': #edecf1,
 );
 
+$theme-width: (
+	'w-10': 10%,
+	'w-20': 20%,
+	'w-30': 30%,
+	'w-40': 40%,
+	'w-50': 50%,
+	'w-60': 60%,
+	'w-70': 70%,
+	'w-80': 80%,
+	'w-90': 90%,
+	'w-100': 100%,
+);
+
 $font-sizes: (
 	small: 12px,
 	medium: 16px,
@@ -37,5 +50,11 @@ $paddings: (
 @each $name, $padding in $paddings {
 	.p-#{$name} {
 		padding: $padding;
+	}
+}
+
+@each $name, $wid in $theme-width {
+	.is-#{$name} {
+		width: $wid;
 	}
 }

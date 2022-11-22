@@ -1,4 +1,11 @@
-@mixin border-r {
-	border-radius: 5px;
-	padding: 10px 20px;
+@import '../variables/base';
+@mixin border($color:black) {
+	border: 3px solid $color;
 }
+
+// @each $name, $color in $theme-colors {
+//   .icon-#{$name}:before {
+// 	border: 3px solid $color;
+
+//   }
+// }
