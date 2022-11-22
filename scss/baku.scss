@@ -2,4 +2,10 @@
 @import './base/reset';
 
 // Components
-@import './components/base/form';
+@import './components/base/form/input';
+@import './variables/base';
+.inp{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
