@@ -1,20 +1,19 @@
 .file::file-selector-button {
-    // color: red;
-    // background: yellow;
-    background-color: teal;
-    color: #000;
-    border: 0px;
-    border-right: 1px solid #e5e5e5;
-    padding: 10px 15px;
-    margin-right: 20px;
-    transition: .3s;
-    cursor: pointer;
+	// color: red;
+	// background: yellow;
+	background-color: teal;
+	color: #000;
+	border: 0px;
+	border-right: 1px solid #e5e5e5;
+	padding: 10px 15px;
+	margin-right: 20px;
+	transition: 0.3s;
+	cursor: pointer;
 }
 
-input[type=file]::file-selector-button:hover {
-    background-color: gray;
-    color: white;
-    border: 0px;
-    border-right: 1px solid #e5e5e5;
+input[type='file']::file-selector-button:hover {
+	background-color: gray;
+	color: white;
+	border: 0px;
+	border-right: 1px solid #e5e5e5;
 }
-

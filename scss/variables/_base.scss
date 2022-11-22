@@ -10,8 +10,32 @@ $theme-colors: (
 	'muted': #edecf1,
 );
 
+$font-sizes: (
+	small: 12px,
+	medium: 16px,
+	large: 20px,
+);
+
+$paddings: (
+	small: 12px,
+	medium: 16px,
+	large: 20px,
+);
+
 @each $name, $theme-color in $theme-colors {
 	.is-#{$name} {
 		border: 1px solid $theme-color;
+	}
+}
+
+@each $name, $font-size in $font-sizes {
+	.is-#{$name} {
+		font-size: $font-size;
+	}
+}
+
+@each $name, $padding in $paddings {
+	.p-#{$name} {
+		padding: $padding;
 	}
 }
