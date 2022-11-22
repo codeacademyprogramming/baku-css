@@ -36,11 +36,15 @@
     border: 1px solid $color;
   }
 }
-
-
-.img-fluid{
-    width: 100%;
-    height: auto;
+@each $name, $size in $base-sizes {
+  .button-#{$name} {
+    @extend .button;
+    font-size: #{$size}rem;
+    padding: auto #{$size}rem;
+  }
 }
 
-
+.img-fluid {
+  width: 100%;
+  height: auto;
+}
