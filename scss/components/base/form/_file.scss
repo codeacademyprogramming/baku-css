@@ -11,7 +11,7 @@
 	cursor: pointer;
 }
 
-input[type='file']::file-selector-button:hover {
+.file[type='file']::file-selector-button:hover {
 	background-color: gray;
 	color: white;
 	border: 0px;
