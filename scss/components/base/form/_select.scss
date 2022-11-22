@@ -1,2 +1,19 @@
-.select {
+@use 'sass:map';
+@import '../../../variables/base';
+
+.form-select {
+	font-size: 18px;
+	padding: 10px;
+	color: #6e6c6c;
+	border-radius: 5px;
+	cursor: pointer;
+	border: 1px solid #6e6c6c;
+
+	&:hover {
+		border: 1px solid #383838;
+	}
+
+	&:focus {
+		border: 1px solid map.get($theme-colors, 'info');
+	}
 }

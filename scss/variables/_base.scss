@@ -9,3 +9,9 @@ $theme-colors: (
 	'dark': #575c62,
 	'muted': #edecf1,
 );
+
+@each $name, $theme-color in $theme-colors {
+	.is-#{$name} {
+		border: 1px solid $theme-color;
+	}
+}
