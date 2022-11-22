@@ -1,28 +1,38 @@
-@import '../../variables/base';
-@import '../../variables/buttons';
+@import "../../variables/base";
+@import "../../variables/buttons";
 
-.button{
-    display: inline-block;
-    padding: .375rem .75rem;
-    font-weight: 400;
-    font-size: 1rem;
-    line-height: 1.5;
-    border: 1px solid transparent;
-    border-radius: .25rem;
-    color: #212529;
-    background-color: transparent;
-    &:hover{
-        cursor: pointer;
-    }  
+.button {
+  display: inline-block;
+  padding: 0.375rem 0.75rem;
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 1.5;
+  border: 1px solid transparent;
+  border-radius: 0.25rem;
+  text-align: center;
+  text-decoration: none;
+  white-space: nowrap;
+  letter-spacing: 1px;
+  &:hover {
+    cursor: pointer;
+    filter: brightness(85%);
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.5;
+  }
 }
 
-
-@each $name,$color in $theme-colors {
-    .button-#{$name}{
-        @extend .button;
-        background-color: $color;
-        color: white;
-    }
- }
-
-
+@each $name, $color in $theme-colors {
+  .button-#{$name} {
+    @extend .button;
+    background-color: $color;
+    color: white;
+  }
+  .button-outline-#{$name} {
+    @extend .button;
+    background-color: transparent;
+    color: $color;
+    border: 1px solid $color;
+  }
+}
