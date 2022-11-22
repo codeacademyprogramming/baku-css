@@ -1,0 +1,62 @@
+@use "sass:map";
+@import "../../variables/base";
+@import "../../variables/table";
+
+.table {
+  margin-top: 50px;
+  width: 100%;
+  // min-height: fit-content;
+  caption-side: bottom;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  // border: 1px solid;
+  border-color: map.get($theme-colors, "dark");
+  color: $black;
+  th {
+    font-weight: 900;
+  }
+}
+
+.bordered {
+  tbody,
+  tr,
+  th,
+  td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+}
+.stripped {
+  tr:nth-child(even) {
+    background-color: rgb(211, 210, 210);
+  }
+  tbody,
+  td,
+  tr,
+  th {
+    border-color: inherit;
+    border: 4px solid #dee2e6;
+    border-width: 0;
+    padding: 20px;
+  }
+  th {
+    border-bottom: 1px solid;
+  }
+}
+
+@each $name, $color in $theme-colors {
+  .table-#{$name} {
+    @if $name("dark") {
+      color: #fff;
+      background-color: $color;
+    } @else {
+      color: #000;
+      background-color: $color;
+    }
+  }
+}
+
+.table-center {
+  text-align: center;
+}
