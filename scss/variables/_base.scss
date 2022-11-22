@@ -54,7 +54,7 @@ $paddings: (
 }
 
 @each $name, $wid in $theme-width {
-	.is-#{$name} {
+	.#{$name} {
 		width: $wid;
 	}
 }
