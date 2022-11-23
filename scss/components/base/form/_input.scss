@@ -5,3 +5,31 @@
 	width: 50%;
 	padding: 15px 5px;
 }
+
+.input-group {
+	display: flex;
+	border: 1px solid #e9ecef;
+	border-radius: 6px;
+}
+
+.form-control {
+	width: 100%;
+	padding: 10px;
+	border-radius: 6px;
+	border: 1px solid #e9ecef;
+
+	&:focus {
+		outline: 1px solid aqua;
+	}
+}
+
+.input-group-text {
+	background-color: #e9ecef;
+	padding: 10px;
+	border: 1px solid #e9ecef;
+	display: inline-block;
+}
+
+.input-group.input-group-text {
+	border: 1px solid #e9ecef;
+}

@@ -41,6 +41,12 @@ $paddings: (
 	}
 }
 
+@each $name, $theme-color in $theme-colors {
+	.c-#{$name} {
+		color: $theme-color;
+	}
+}
+
 @each $name, $font-size in $font-sizes {
 	.is-#{$name} {
 		font-size: $font-size;
