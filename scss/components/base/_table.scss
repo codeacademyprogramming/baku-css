@@ -61,7 +61,6 @@
   text-align: center;
 }
 
-@each $name, $color in $theme-colors {
   .table__hover-#{$name} {
     tr:hover {
       background-color: $color;
