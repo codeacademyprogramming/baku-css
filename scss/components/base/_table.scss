@@ -61,9 +61,8 @@
   text-align: center;
 }
 
-  .table__hover-#{$name} {
-    tr:hover {
-      background-color: $color;
-    }
+.table__hover-#{$name} {
+  tr:hover {
+    background-color: $color;
   }
 }
