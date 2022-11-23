@@ -1,0 +1,41 @@
+@import "../base/breakpoints";
+
+$no-of-columns: 12;
+
+.ca-row{
+    display: flex;
+    flex-flow: row wrap;
+
+}
+
+.ca-col{
+    flex-basis: 0px;
+    -webkit-box-flex: 1;
+    -ms-flex-positive: 1;
+    flex-grow: 1;
+    max-width: 100%;
+}
+
+@each $breakpoint,$value in $breakpoints {
+    // MEDIA QUERY
+    @media only screen and (min-width: $value) {
+        // RESPONSIVE COLUMN CODE .....
+        @for $i from 1 through $no-of-columns {
+            .ca-col-#{$breakpoint}-#{$i} {
+                flex-basis: auto;
+                box-sizing: border-box;
+                width: (100% /  ( $no-of-columns / $i));  
+            }
+        }
+    }
+}
+
+@each $value in $breakpoints {
+    @for $i from 1 through $no-of-columns {
+        .ca-col-#{$i} {
+            flex-basis: auto;
+            box-sizing: border-box;
+            width: (100% /  ( $no-of-columns / $i));  
+        }
+    }
+}

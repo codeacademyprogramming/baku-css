@@ -1,68 +1,28 @@
-@import "../../variables/base";
-@import "../../variables/buttons";
+@import '../../variables/base';
+@import '../../variables/buttons';
 
-.button {
-  display: inline-block;
-  padding: 0.375rem 0.75rem;
-  font-weight: 400;
-  font-size: 1rem;
-  line-height: 1.5;
-  border: 1px solid transparent;
-  border-radius: 0.25rem;
-  text-align: center;
-  text-decoration: none;
-  white-space: nowrap;
-  letter-spacing: 1px;
-  &:hover {
-    cursor: pointer;
-    filter: brightness(85%);
-  }
-  &:disabled {
-    cursor: default;
-    opacity: 0.5;
-    filter: brightness(100%);
-  }
+.button{
+    display: inline-block;
+    padding: .375rem .75rem;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 1.5;
+    border: 1px solid transparent;
+    border-radius: .25rem;
+    color: #212529;
+    background-color: transparent;
+    &:hover{
+        cursor: pointer;
+    }  
 }
 
-@each $name, $color in $theme-colors {
-  .btn-#{$name} {
-    @extend .button;
-    @if ($name== "light" or $name== "muted") {
-      color: #000;
-      background-color: $color;
-      border: 1px solid #333;
-    } @else {
-      background-color: $color;
-      color: white;
-    }
-  }
-  .btn-out-#{$name} {
-    @extend .button;
-    @if ($name) {
-      &:hover {
-        background-color: #f8f8fa;
-      }
-    }
-    @if ($name == "light" or $name == "muted") {
-      color: #000;
-      border: 1px solid #000;
-      background-color: transparent;
-    } @else {
-      background-color: transparent;
-      color: $color;
-      border: 1px solid $color;
-    }
-  }
-}
-@each $name, $size in $base-sizes {
-  .btn-#{$name} {
-    @extend .button;
-    font-size: #{$size}rem;
-    padding: auto #{$size}rem;
-  }
-}
 
-.img-fluid {
-  width: 100%;
-  height: auto;
-}
+@each $name,$color in $theme-colors {
+    .button-#{$name}{
+        @extend .button;
+        background-color: $color;
+        color: white;
+    }
+ }
+
+

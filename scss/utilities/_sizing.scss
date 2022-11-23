@@ -1,0 +1,30 @@
+$width-height:(
+    "25":25%,
+    "50":50%,
+    "75":75%,
+    "100":100%,
+    "auto":auto,
+);
+
+@each $key,$value in $width-height{
+    .ca-w-#{$key}{
+        width: $value;
+    };
+    .ca-h-#{$key}{
+        height: $value;
+    }
+}
+
+@each $key,$value in $breakpoints {
+    @media (min-width:$value) {
+        @each $key2,$value2 in $width-height{
+            .ca-w-#{$key}-#{$key2}{
+                width: $value2;
+            };
+            .ca-h-#{$key}-#{$key2}{
+                height: $value2;
+            }
+        }
+    }
+
+}

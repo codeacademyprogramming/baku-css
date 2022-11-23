@@ -1,0 +1,150 @@
+$main-space: 1rem;
+
+$margin: (
+    "0":0px,
+    "1":$main-space*0.25,
+    "2":$main-space*0.5,
+    "3":$main-space*1,
+    "4":$main-space*1.5,
+    "5":$main-space*3,
+    "auto":auto
+);
+
+$padding: (
+    "0":0px,
+    "1":$main-space*0.25,
+    "2":$main-space*0.5,
+    "3":$main-space*1,
+    "4":$main-space*1.5,
+    "5":$main-space*3,
+);
+
+@each $key,
+$value in $margin {
+    .ca-m-#{$key} {
+        margin: $value;
+    }
+
+    .ca-ml-#{$key} {
+        margin-left: $value;
+    }
+
+    .ca-mr-#{$key} {
+        margin-right: $value;
+    }
+
+    .ca-mx-#{$key} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .ca-my-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+}
+
+@each $key,
+$value in $padding {
+    .ca-p-#{$key} {
+        padding: $value;
+    }
+
+    .ca-pl-#{$key} {
+        padding-left: $value;
+    }
+
+    .ca-pr-#{$key} {
+        padding-right: $value;
+    }
+
+    .ca-px-#{$key} {
+        padding-right: $value;
+        padding-left: $value;
+    }
+
+    .ca-py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}
+
+@each $key,
+$value in $breakpoints {
+    @media (min-width:$value) {
+
+        @each $key2,
+        $value2 in $margin {
+            .ca-m-#{$key}-#{$key2} {
+                margin: $value2;
+            }
+
+            .ca-ml-#{$key}-#{$key2} {
+                margin-left: $value2;
+            }
+
+            .ca-mr-#{$key}-#{$key2} {
+                margin-right: $value2;
+            }
+
+            .ca-mx-#{$key}-#{$key2} {
+                margin-right: $value2;
+                margin-left: $value2;
+            }
+
+            .ca-my-#{$key}-#{$key2} {
+                margin-top: $value2;
+                margin-bottom: $value2;
+            }
+
+            .ca-p-#{$key}-#{$key2} {
+                padding: $value2;
+            }
+
+            .ca-pl-#{$key}-#{$key2} {
+                padding-left: $value2;
+            }
+
+            .ca-pr-#{$key}-#{$key2} {
+                padding-right: $value2;
+            }
+
+            .ca-px-#{$key}-#{$key2} {
+                padding-right: $value2;
+                padding-left: $value2;
+            }
+
+            .ca-py-#{$key}-#{$key2} {
+                padding-top: $value2;
+                padding-bottom: $value2;
+            }
+        }
+
+        @each $key2,
+        $value2 in $padding {
+            .ca-p-#{$key}-#{$key2} {
+                padding: $value2;
+            }
+
+            .ca-pl-#{$key}-#{$key2} {
+                padding-left: $value2;
+            }
+
+            .ca-pr-#{$key}-#{$key2} {
+                padding-right: $value2;
+            }
+
+            .ca-px-#{$key}-#{$key2} {
+                padding-right: $value2;
+                padding-left: $value2;
+            }
+
+            .ca-py-#{$key}-#{$key2} {
+                padding-top: $value2;
+                padding-bottom: $value2;
+            }
+        }
+    }
+
+}
