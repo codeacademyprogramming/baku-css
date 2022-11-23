@@ -60,3 +60,13 @@
 .table-center {
   text-align: center;
 }
+
+// .table__hover:hover {
+//   background-color: red !important;
+// }
+
+@each $name, $color in $theme-colors {
+  .table__hover-#{$name}:hover {
+    background-color: $color;
+  }
+}
