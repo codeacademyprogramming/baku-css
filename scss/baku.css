@@ -139,39 +139,39 @@ table {
   text-align: center;
 }
 
-.table__hover-primary:hover {
+.table__hover-primary tr:hover {
   background-color: #626ED4;
 }
 
-.table__hover-secondary:hover {
+.table__hover-secondary tr:hover {
   background-color: #343549;
 }
 
-.table__hover-success:hover {
+.table__hover-success tr:hover {
   background-color: #2AA39A;
 }
 
-.table__hover-danger:hover {
+.table__hover-danger tr:hover {
   background-color: #EC4561;
 }
 
-.table__hover-warning:hover {
+.table__hover-warning tr:hover {
   background-color: #F8B425;
 }
 
-.table__hover-info:hover {
+.table__hover-info tr:hover {
   background-color: #38A5F8;
 }
 
-.table__hover-light:hover {
+.table__hover-light tr:hover {
   background-color: #f8f8fa;
 }
 
-.table__hover-dark:hover {
+.table__hover-dark tr:hover {
   background-color: #575c62;
 }
 
-.table__hover-muted:hover {
+.table__hover-muted tr:hover {
   background-color: #EDECF1;
 }
 
