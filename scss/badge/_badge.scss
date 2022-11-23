@@ -1,0 +1,24 @@
+$bdg-padding-x: 0.7em;
+$bdg-padding-y: 0.4em;
+$bdg-font-size: 0.9em;
+$bdg-font-weight: 700;
+$bdg-border-radius: 0.350rem;
+$bdg-color: #fff;
+
+.badge {
+    display:inline-block;
+    padding: $bdg-padding-x $bdg-padding-y;
+    font-size: $bdg-font-size;
+    font-weight: $bdg-font-weight;
+    border-radius: $bdg-border-radius;
+    color: $bdg-color;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    line-height: 1;
+    background-color: aqua;
+}
+
+.rounded-rad {
+    border-radius: 60rem !important;
+}
