@@ -1,0 +1,23 @@
+$float:(
+    "left":left,
+    "right":right,
+    "none":right
+);
+
+@each $item in $float {
+    .ca-float-#{$item} {
+        float: $item;
+    }
+}
+
+@each $key,
+$value in $breakpoints {
+    @media (min-width:$value) {
+        @each $item in $float {
+            .ca-float-#{$key}-#{$item} {
+                float: $item;
+            }
+        }
+    }
+
+}

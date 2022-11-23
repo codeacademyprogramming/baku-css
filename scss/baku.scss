@@ -1,8 +1,12 @@
 //Core
-@import "./base/reset";
+@import './base/reset';
+
 
 // Components
-@import "./components/base/buttons";
+@import './components/base/buttons';
 
-//cards
-@import "./components/base/cards";
+// Grid
+@import "./grid/grid";
+
+// Utilities
+@import "./utilities/utilities"
