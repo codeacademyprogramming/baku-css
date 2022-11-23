@@ -94,3 +94,9 @@
 .table-center {
   text-align: center;
 }
+
+.table__hover-#{$name} {
+  tr:hover {
+    background-color: $color;
+  }
+}
