@@ -1,0 +1,42 @@
+@use "sass:map";
+@import url('https://fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;500;600;700&display=swap');
+@import '../../variables/base';
+
+//Main Code - Breadcrumb
+
+.breadcrumb {
+	background-color: rgb(255, 255, 255);
+	display: block;
+}
+
+.breadcrumb-item {
+	display: inline-block;
+	color: rgb(0, 0, 0);
+	font-family: 'Hind Siliguri', sans-serif;
+	font-weight: 300;
+	font-size: 1.2rem;
+	text-decoration: none;
+	width: 100%;
+	height: auto;
+	padding: 10px 0 10px 15px;
+
+	&:hover {
+		cursor: pointer;
+		color: rgb(0, 0, 0, 0.5);
+	}
+
+	&:after {
+		padding: 0px 0px 0px 5px;
+		content: "/";
+		color: rgb(0, 0, 0);
+	}
+
+	&:active {
+		color: rgb(0, 0, 0, 0.3);
+
+	}
+
+	&:visited {
+		color: rgb(0, 0, 255, 0.6);
+	}
+}
