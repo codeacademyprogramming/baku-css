@@ -27,14 +27,31 @@
 @each $name, $color in $theme-colors {
   .btn-#{$name} {
     @extend .button;
-    background-color: $color;
-    color: white;
+    @if ($name== "light" or $name== "muted") {
+      color: #000;
+      background-color: $color;
+      border: 1px solid #333;
+    } @else {
+      background-color: $color;
+      color: white;
+    }
   }
   .btn-out-#{$name} {
     @extend .button;
-    background-color: transparent;
-    color: $color;
-    border: 1px solid $color;
+    @if ($name) {
+      &:hover {
+        background-color: #f8f8fa;
+      }
+    }
+    @if ($name == "light" or $name == "muted") {
+      color: #000;
+      border: 1px solid #000;
+      background-color: transparent;
+    } @else {
+      background-color: transparent;
+      color: $color;
+      border: 1px solid $color;
+    }
   }
 }
 @each $name, $size in $base-sizes {
