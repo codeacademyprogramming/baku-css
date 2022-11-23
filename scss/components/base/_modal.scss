@@ -1,0 +1,43 @@
+body {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.container {
+  margin: 10px auto;
+  padding: 20px;
+  width: 350px;
+  text-align: center;
+}
+label {
+  display: block;
+  margin: 20px auto;
+  background-color: rgb(244, 195, 186);
+  width: 150px;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+label:hover {
+  background-color: rgba(244, 195, 186, 0.5);
+}
+label:active {
+  transform: translateY(4px);
+}
+#toggle {
+  display: none;
+}
+
+.modal {
+  padding: 20px;
+  background-color: rgb(233, 230, 233);
+  width: 350px;
+  height: 150px;
+  border-radius: 5px;
+  margin: auto;
+  display: flex;
+  gap: 10px;
+  flex-direction: column;
+}
+#toggle:checked + .modal {
+  display: none;
+}
