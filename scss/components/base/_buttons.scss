@@ -24,12 +24,12 @@
 }
 
 @each $name, $color in $theme-colors {
-  .button-#{$name} {
+  .btn-#{$name} {
     @extend .button;
     background-color: $color;
     color: white;
   }
-  .button-outline-#{$name} {
+  .btn-out-#{$name} {
     @extend .button;
     background-color: transparent;
     color: $color;
@@ -37,7 +37,7 @@
   }
 }
 @each $name, $size in $base-sizes {
-  .button-#{$name} {
+  .btn-#{$name} {
     @extend .button;
     font-size: #{$size}rem;
     padding: auto #{$size}rem;
