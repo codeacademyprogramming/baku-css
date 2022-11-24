@@ -3,6 +3,8 @@
 
 
 // Components
+
+@import "./components/base/table"
 @import './components/base/buttons';
 
 // Grid
@@ -10,3 +12,4 @@
 
 // Utilities
 @import "./utilities/utilities"
+

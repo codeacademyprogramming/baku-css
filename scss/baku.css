@@ -1,0 +1,305 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: #575c62;
+  color: #212529;
+}
+.table th {
+  font-weight: 900;
+}
+
+.table-bordered tbody,
+.table-bordered tr,
+.table-bordered th,
+.table-bordered td {
+  border: 1px solid black;
+  padding: 20px;
+}
+
+.table-dark.table-bordered tbody,
+.table-dark.table-bordered tr,
+.table-dark.table-bordered th,
+.table-dark.table-bordered td {
+  border: 1px solid #fff;
+}
+.table-stripped tr:nth-child(even) {
+  background-color: #d3d2d2;
+}
+.table-stripped tbody,
+.table-stripped td,
+.table-stripped tr,
+.table-stripped th {
+  border-color: inherit;
+  border: 4px solid #dee2e6;
+  border-width: 0;
+  padding: 20px;
+}
+
+.table-primary {
+  color: #000;
+  background-color: #626ED4;
+}
+.table-primary thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-secondary {
+  color: #000;
+  background-color: #343549;
+}
+.table-secondary thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-success {
+  color: #000;
+  background-color: #2AA39A;
+}
+.table-success thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-danger {
+  color: #000;
+  background-color: #EC4561;
+}
+.table-danger thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-warning {
+  color: #000;
+  background-color: #F8B425;
+}
+.table-warning thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-info {
+  color: #000;
+  background-color: #38A5F8;
+}
+.table-info thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-light {
+  color: #000;
+  background-color: #f8f8fa;
+}
+.table-light thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.table-dark {
+  color: #fff;
+  background-color: #212529;
+}
+.table-dark thead tr {
+  border-bottom: 1px solid #fff;
+}
+
+.table-muted {
+  color: #000;
+  background-color: #EDECF1;
+}
+.table-muted thead tr {
+  border-bottom: 1px solid #000;
+}
+
+.border-primary thead,
+.border-primary tbody,
+.border-primary tr,
+.border-primary th,
+.border-primary td {
+  border: 1px solid #626ED4 !important;
+}
+
+.border-secondary thead,
+.border-secondary tbody,
+.border-secondary tr,
+.border-secondary th,
+.border-secondary td {
+  border: 1px solid #343549 !important;
+}
+
+.border-success thead,
+.border-success tbody,
+.border-success tr,
+.border-success th,
+.border-success td {
+  border: 1px solid #2AA39A !important;
+}
+
+.border-danger thead,
+.border-danger tbody,
+.border-danger tr,
+.border-danger th,
+.border-danger td {
+  border: 1px solid #EC4561 !important;
+}
+
+.border-warning thead,
+.border-warning tbody,
+.border-warning tr,
+.border-warning th,
+.border-warning td {
+  border: 1px solid #F8B425 !important;
+}
+
+.border-info thead,
+.border-info tbody,
+.border-info tr,
+.border-info th,
+.border-info td {
+  border: 1px solid #38A5F8 !important;
+}
+
+.border-light thead,
+.border-light tbody,
+.border-light tr,
+.border-light th,
+.border-light td {
+  border: 1px solid #f8f8fa !important;
+}
+
+.border-dark thead,
+.border-dark tbody,
+.border-dark tr,
+.border-dark th,
+.border-dark td {
+  border: 1px solid #575c62 !important;
+}
+
+.border-muted thead,
+.border-muted tbody,
+.border-muted tr,
+.border-muted th,
+.border-muted td {
+  border: 1px solid #EDECF1 !important;
+}
+
+.table-dark.table-stripped tr:nth-child(even) {
+  background-color: #2C3034;
+}
+.table-dark.table-stripped th,
+.table-dark.table-stripped td {
+  padding: 20px;
+}
+.table-dark.table-stripped tr {
+  border-color: inherit;
+  border: 1px solid #dee2e6;
+  border-width: 0;
+}
+
+.table-stripped tr:nth-child(even) {
+  background-color: rgb(211, 210, 210);
+}
+.table-stripped th,
+.table-stripped td {
+  padding: 20px;
+}
+.table-stripped tr {
+  border-color: inherit;
+  border: 1px solid #dee2e6;
+  border-width: 0;
+}
+
+.table-center {
+  text-align: center;
+}
+
+.table__hover-primary tr:hover {
+  background-color: #626ED4;
+}
+
+.table__hover-secondary tr:hover {
+  background-color: #343549;
+}
+
+.table__hover-success tr:hover {
+  background-color: #2AA39A;
+}
+
+.table__hover-danger tr:hover {
+  background-color: #EC4561;
+}
+
+.table__hover-warning tr:hover {
+  background-color: #F8B425;
+}
+
+.table__hover-info tr:hover {
+  background-color: #38A5F8;
+}
+
+.table__hover-light tr:hover {
+  background-color: #f8f8fa;
+}
+
+.table__hover-dark tr:hover {
+  background-color: #575c62;
+}
+
+.table__hover-muted tr:hover {
+  background-color: #EDECF1;
+}
+
+/*# sourceMappingURL=baku.css.map */

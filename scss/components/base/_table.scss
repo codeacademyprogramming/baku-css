@@ -1,0 +1,102 @@
+@use "sass:map";
+@import "../../variables/base";
+@import "../../variables/table";
+.table {
+  width: 100%;
+  caption-side: bottom;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  vertical-align: top;
+  border-color: map.get($theme-colors, "dark");
+  color: $black;
+  th {
+    font-weight: 900;
+  }
+}
+.table-bordered {
+  tbody,
+  tr,
+  th,
+  td {
+    border: 1px solid black;
+    padding: 20px;
+  }
+}
+.table-dark.table-bordered {
+  tbody,
+  tr,
+  th,
+  td {
+    border: 1px solid #fff;
+    padding: 20px;
+  }
+}
+@each $name, $color in $theme-colors {
+  .table-#{$name} {
+    @if $name == "dark" {
+      color: #fff;
+      background-color: $black;
+      thead {
+        tr {
+          border-bottom: 1px solid #fff;
+        }
+      }
+    } @else {
+      color: #000;
+      background-color: $color;
+      thead {
+        tr {
+          border-bottom: 1px solid #000;
+        }
+      }
+    }
+  }
+}
+@each $name, $color in $theme-colors {
+  .border-#{$name} {
+    thead,
+    tbody,
+    tr,
+    th,
+    td {
+      border: 1px solid $color !important ;
+    }
+  }
+}
+.table-dark.table-stripped {
+  tr:nth-child(even) {
+    background-color: $light-black;
+  }
+  th,
+  td {
+    padding: 20px;
+  }
+  tr {
+    border-color: inherit;
+    border: 1px solid #dee2e6;
+    border-width: 0;
+  }
+}
+.table-stripped {
+  tr:nth-child(even) {
+    background-color: rgb(211, 210, 210);
+  }
+  th,
+  td {
+    padding: 20px;
+  }
+  tr {
+    border-color: inherit;
+    border: 1px solid #dee2e6;
+    border-width: 0;
+  }
+}
+.table-center {
+  text-align: center;
+}
+
+.table__hover-#{$name} {
+  tr:hover {
+    background-color: $color;
+  }
+}
